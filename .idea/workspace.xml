@@ -11,7 +11,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f309c5ac-3373-49dd-9179-824788b1508f" name="Default" comment="" />
+    <list default="true" id="4de439f5-620e-44ea-9793-bbc58b2dfa9c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/es/iessaladillo/pedrojoya/pr05/data/local/model/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/es/iessaladillo/pedrojoya/pr05/data/local/model/Avatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_avatar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_avatar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_avatar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_avatar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +45,185 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="activity_main_profile.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_profile.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+              <folding>
+                <element signature="e#547#571#0" expanded="true" />
+                <element signature="e#605#627#0" expanded="true" />
+                <element signature="e#689#720#0" expanded="true" />
+                <element signature="e#1081#1105#0" expanded="true" />
+                <element signature="e#1139#1161#0" expanded="true" />
+                <element signature="e#1226#1257#0" expanded="true" />
+                <element signature="e#1670#1694#0" expanded="true" />
+                <element signature="e#1728#1750#0" expanded="true" />
+                <element signature="e#1813#1845#0" expanded="true" />
+                <element signature="e#2183#2207#0" expanded="true" />
+                <element signature="e#2241#2263#0" expanded="true" />
+                <element signature="e#2297#2319#0" expanded="true" />
+                <element signature="e#2386#2418#0" expanded="true" />
+                <element signature="e#2894#2915#0" expanded="true" />
+                <element signature="e#3233#3263#0" expanded="true" />
+                <element signature="e#3447#3471#0" expanded="true" />
+                <element signature="e#3505#3527#0" expanded="true" />
+                <element signature="e#3596#3634#0" expanded="true" />
+                <element signature="e#3983#4005#0" expanded="true" />
+                <element signature="e#4039#4061#0" expanded="true" />
+                <element signature="e#4141#4179#0" expanded="true" />
+                <element signature="e#4643#4664#0" expanded="true" />
+                <element signature="e#4978#5014#0" expanded="true" />
+                <element signature="e#5193#5217#0" expanded="true" />
+                <element signature="e#5251#5273#0" expanded="true" />
+                <element signature="e#5338#5372#0" expanded="true" />
+                <element signature="e#5713#5737#0" expanded="true" />
+                <element signature="e#5771#5793#0" expanded="true" />
+                <element signature="e#5827#5849#0" expanded="true" />
+                <element signature="e#5917#5951#0" expanded="true" />
+                <element signature="e#6379#6400#0" expanded="true" />
+                <element signature="e#6705#6737#0" expanded="true" />
+                <element signature="e#6912#6936#0" expanded="true" />
+                <element signature="e#6970#6992#0" expanded="true" />
+                <element signature="e#7053#7083#0" expanded="true" />
+                <element signature="e#7422#7446#0" expanded="true" />
+                <element signature="e#7480#7502#0" expanded="true" />
+                <element signature="e#7536#7558#0" expanded="true" />
+                <element signature="e#7616#7646#0" expanded="true" />
+                <element signature="e#8062#8083#0" expanded="true" />
+                <element signature="e#8380#8408#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iessaladillo/pedrojoya/pr05/ui/main/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_avatar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_avatar.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+              <folding>
+                <element signature="e#912#944#0" expanded="true" />
+                <element signature="e#1173#1202#0" expanded="true" />
+                <element signature="e#1239#1268#0" expanded="true" />
+                <element signature="e#1293#1323#0" expanded="true" />
+                <element signature="e#2076#2108#0" expanded="true" />
+                <element signature="e#2286#2315#0" expanded="true" />
+                <element signature="e#2352#2381#0" expanded="true" />
+                <element signature="e#2406#2436#0" expanded="true" />
+                <element signature="e#3265#3297#0" expanded="true" />
+                <element signature="e#3475#3504#0" expanded="true" />
+                <element signature="e#3541#3570#0" expanded="true" />
+                <element signature="e#3595#3625#0" expanded="true" />
+                <element signature="e#4390#4422#0" expanded="true" />
+                <element signature="e#4600#4629#0" expanded="true" />
+                <element signature="e#4666#4695#0" expanded="true" />
+                <element signature="e#4720#4750#0" expanded="true" />
+                <element signature="e#5573#5605#0" expanded="true" />
+                <element signature="e#5783#5812#0" expanded="true" />
+                <element signature="e#5849#5878#0" expanded="true" />
+                <element signature="e#5903#5933#0" expanded="true" />
+                <element signature="e#6692#6724#0" expanded="true" />
+                <element signature="e#6902#6931#0" expanded="true" />
+                <element signature="e#6968#6997#0" expanded="true" />
+                <element signature="e#7022#7052#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_avatar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_avatar.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+              <folding>
+                <element signature="e#963#995#0" expanded="true" />
+                <element signature="e#1173#1202#0" expanded="true" />
+                <element signature="e#1239#1268#0" expanded="true" />
+                <element signature="e#1293#1323#0" expanded="true" />
+                <element signature="e#2067#2099#0" expanded="true" />
+                <element signature="e#2277#2306#0" expanded="true" />
+                <element signature="e#2343#2372#0" expanded="true" />
+                <element signature="e#2397#2427#0" expanded="true" />
+                <element signature="e#3247#3279#0" expanded="true" />
+                <element signature="e#3457#3486#0" expanded="true" />
+                <element signature="e#3523#3552#0" expanded="true" />
+                <element signature="e#3577#3607#0" expanded="true" />
+                <element signature="e#4363#4395#0" expanded="true" />
+                <element signature="e#4573#4602#0" expanded="true" />
+                <element signature="e#4639#4668#0" expanded="true" />
+                <element signature="e#4693#4723#0" expanded="true" />
+                <element signature="e#5414#5446#0" expanded="true" />
+                <element signature="e#5747#5776#0" expanded="true" />
+                <element signature="e#5813#5842#0" expanded="true" />
+                <element signature="e#5867#5897#0" expanded="true" />
+                <element signature="e#6647#6679#0" expanded="true" />
+                <element signature="e#6857#6886#0" expanded="true" />
+                <element signature="e#6923#6952#0" expanded="true" />
+                <element signature="e#6977#7007#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>TODO</find>
+      <find>activity_avatar_label</find>
+      <find>avatar_label_background_bac</find>
+      <find>avatar_label_background_background</find>
+      <find>chains</find>
+      <find>src</find>
     </findStrings>
+    <replaceStrings>
+      <replace>avatar_label_background</replace>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -2301,7 +2487,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/es/iessaladillo/pedrojoya/pr05/data/local/model/Avatar.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_profile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_avatar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_avatar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" />
       </list>
     </option>
   </component>
@@ -2311,7 +2504,6 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -2347,8 +2539,23 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="pr05" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ADM-PR05-OrientationChange" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="pr05" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="avatar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ADM-PR05-OrientationChange" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="pr05" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ADM-PR05-OrientationChange" type="1abcf292:AndroidViewProjectNode" />
@@ -2377,7 +2584,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="plugin&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="device.picker.selection" value="Nexus_5X_API_28" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
   </component>
@@ -2414,7 +2623,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -2498,11 +2707,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f309c5ac-3373-49dd-9179-824788b1508f" name="Default" comment="" />
-      <created>1540843083543</created>
+      <changelist id="4de439f5-620e-44ea-9793-bbc58b2dfa9c" name="Default" comment="" />
+      <created>1540919690906</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1540843083543</updated>
+      <updated>1540919690906</updated>
     </task>
     <servers />
   </component>
@@ -2510,21 +2719,21 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info id="Build Variants" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Preview" />
+      <window_info anchor="right" id="Preview" weight="0.32995737" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Logcat" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Build" weight="0.32897604" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" />
@@ -2534,74 +2743,221 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Device File Explorer" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/sampledata/users.json">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="381">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/color/color_state_selector.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/avatars.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state />
+        <state relative-caret-position="220">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="40" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iessaladillo/pedrojoya/pr05/data/local/model/Avatar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state />
+        <state relative-caret-position="820">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iessaladillo/pedrojoya/pr05/data/local/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        <state relative-caret-position="120">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iessaladillo/pedrojoya/pr05/ui/avatar/AvatarActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+          <folding>
+            <element signature="e#547#571#0" expanded="true" />
+            <element signature="e#605#627#0" expanded="true" />
+            <element signature="e#689#720#0" expanded="true" />
+            <element signature="e#1081#1105#0" expanded="true" />
+            <element signature="e#1139#1161#0" expanded="true" />
+            <element signature="e#1226#1257#0" expanded="true" />
+            <element signature="e#1670#1694#0" expanded="true" />
+            <element signature="e#1728#1750#0" expanded="true" />
+            <element signature="e#1813#1845#0" expanded="true" />
+            <element signature="e#2183#2207#0" expanded="true" />
+            <element signature="e#2241#2263#0" expanded="true" />
+            <element signature="e#2297#2319#0" expanded="true" />
+            <element signature="e#2386#2418#0" expanded="true" />
+            <element signature="e#2894#2915#0" expanded="true" />
+            <element signature="e#3233#3263#0" expanded="true" />
+            <element signature="e#3447#3471#0" expanded="true" />
+            <element signature="e#3505#3527#0" expanded="true" />
+            <element signature="e#3596#3634#0" expanded="true" />
+            <element signature="e#3983#4005#0" expanded="true" />
+            <element signature="e#4039#4061#0" expanded="true" />
+            <element signature="e#4141#4179#0" expanded="true" />
+            <element signature="e#4643#4664#0" expanded="true" />
+            <element signature="e#4978#5014#0" expanded="true" />
+            <element signature="e#5193#5217#0" expanded="true" />
+            <element signature="e#5251#5273#0" expanded="true" />
+            <element signature="e#5338#5372#0" expanded="true" />
+            <element signature="e#5713#5737#0" expanded="true" />
+            <element signature="e#5771#5793#0" expanded="true" />
+            <element signature="e#5827#5849#0" expanded="true" />
+            <element signature="e#5917#5951#0" expanded="true" />
+            <element signature="e#6379#6400#0" expanded="true" />
+            <element signature="e#6705#6737#0" expanded="true" />
+            <element signature="e#6912#6936#0" expanded="true" />
+            <element signature="e#6970#6992#0" expanded="true" />
+            <element signature="e#7053#7083#0" expanded="true" />
+            <element signature="e#7422#7446#0" expanded="true" />
+            <element signature="e#7480#7502#0" expanded="true" />
+            <element signature="e#7536#7558#0" expanded="true" />
+            <element signature="e#7616#7646#0" expanded="true" />
+            <element signature="e#8062#8083#0" expanded="true" />
+            <element signature="e#8380#8408#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_avatar.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        <state relative-caret-position="300">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="e#912#944#0" expanded="true" />
+            <element signature="e#1173#1202#0" expanded="true" />
+            <element signature="e#1239#1268#0" expanded="true" />
+            <element signature="e#1293#1323#0" expanded="true" />
+            <element signature="e#2076#2108#0" expanded="true" />
+            <element signature="e#2286#2315#0" expanded="true" />
+            <element signature="e#2352#2381#0" expanded="true" />
+            <element signature="e#2406#2436#0" expanded="true" />
+            <element signature="e#3265#3297#0" expanded="true" />
+            <element signature="e#3475#3504#0" expanded="true" />
+            <element signature="e#3541#3570#0" expanded="true" />
+            <element signature="e#3595#3625#0" expanded="true" />
+            <element signature="e#4390#4422#0" expanded="true" />
+            <element signature="e#4600#4629#0" expanded="true" />
+            <element signature="e#4666#4695#0" expanded="true" />
+            <element signature="e#4720#4750#0" expanded="true" />
+            <element signature="e#5573#5605#0" expanded="true" />
+            <element signature="e#5783#5812#0" expanded="true" />
+            <element signature="e#5849#5878#0" expanded="true" />
+            <element signature="e#5903#5933#0" expanded="true" />
+            <element signature="e#6692#6724#0" expanded="true" />
+            <element signature="e#6902#6931#0" expanded="true" />
+            <element signature="e#6968#6997#0" expanded="true" />
+            <element signature="e#7022#7052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_avatar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+          <folding>
+            <element signature="e#963#995#0" expanded="true" />
+            <element signature="e#1173#1202#0" expanded="true" />
+            <element signature="e#1239#1268#0" expanded="true" />
+            <element signature="e#1293#1323#0" expanded="true" />
+            <element signature="e#2067#2099#0" expanded="true" />
+            <element signature="e#2277#2306#0" expanded="true" />
+            <element signature="e#2343#2372#0" expanded="true" />
+            <element signature="e#2397#2427#0" expanded="true" />
+            <element signature="e#3247#3279#0" expanded="true" />
+            <element signature="e#3457#3486#0" expanded="true" />
+            <element signature="e#3523#3552#0" expanded="true" />
+            <element signature="e#3577#3607#0" expanded="true" />
+            <element signature="e#4363#4395#0" expanded="true" />
+            <element signature="e#4573#4602#0" expanded="true" />
+            <element signature="e#4639#4668#0" expanded="true" />
+            <element signature="e#4693#4723#0" expanded="true" />
+            <element signature="e#5414#5446#0" expanded="true" />
+            <element signature="e#5747#5776#0" expanded="true" />
+            <element signature="e#5813#5842#0" expanded="true" />
+            <element signature="e#5867#5897#0" expanded="true" />
+            <element signature="e#6647#6679#0" expanded="true" />
+            <element signature="e#6857#6886#0" expanded="true" />
+            <element signature="e#6923#6952#0" expanded="true" />
+            <element signature="e#6977#7007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/es/iessaladillo/pedrojoya/pr05/ui/main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>

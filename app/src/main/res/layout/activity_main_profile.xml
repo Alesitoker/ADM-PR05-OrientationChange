@@ -12,7 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/lbl_marginStart"
-        android:layout_marginTop="@dimen/lbl_marginTop"
         android:labelFor="@+id/txtName"
         android:text="@string/activity_main_lblName"
         android:textColor="@color/color_state_selector"

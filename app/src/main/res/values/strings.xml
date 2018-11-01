@@ -27,4 +27,6 @@
     <string name="description_imgAvatar4">Avatar 4</string>
     <string name="description_imgAvatar5">Avatar 5</string>
     <string name="description_imgAvatar6">Avatar 6</string>
+    <string name="DimensionRatio_land_imgAvatar">w,1:1.8</string>
+    <string name="DimensionRatio_imgAvatar">h, 16:9</string>
 </resources>

@@ -2,19 +2,14 @@ package es.iessaladillo.pedrojoya.pr05.ui.avatar;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -34,25 +29,25 @@ public class AvatarActivity extends AppCompatActivity {
     private ImageView imgAvatar4;
     private ImageView imgAvatar5;
     private ImageView imgAvatar6;
-    private final Database database = Database.getInstance();
     private TextView lblAvatar1;
     private TextView lblAvatar2;
     private TextView lblAvatar3;
     private TextView lblAvatar4;
     private TextView lblAvatar5;
     private TextView lblAvatar6;
-    private Avatar avatar;
     private final byte positionAvatar1 = 0;
     private final byte positionAvatar2 = 1;
     private final byte positionAvatar3 = 2;
     private final byte positionAvatar4 = 3;
     private final byte positionAvatar5 = 4;
     private final byte positionAvatar6 = 5;
+    private AvatarActivityViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avatar);
+        viewModel = ViewModelProviders.of(this).get(AvatarActivityViewModel.class);
         getIntentData();
         initViews();
     }
@@ -60,8 +55,8 @@ public class AvatarActivity extends AppCompatActivity {
     private void getIntentData() {
         Intent intent = getIntent();
         if (intent != null) {
-            if (intent.hasExtra(EXTRA_AVATAR)) {
-                avatar = intent.getParcelableExtra(EXTRA_AVATAR);
+            if (intent.hasExtra(EXTRA_AVATAR) && viewModel.getAvatar() == null) {
+                viewModel.setAvatar(intent.getParcelableExtra(EXTRA_AVATAR));
             }
         }
     }
@@ -82,23 +77,23 @@ public class AvatarActivity extends AppCompatActivity {
 
         startAvatar();
         selectedImage();
-        imgAvatar1.setOnClickListener(v -> changeAvatar(positionAvatar1));
-        imgAvatar2.setOnClickListener(v -> changeAvatar(positionAvatar2));
-        imgAvatar3.setOnClickListener(v -> changeAvatar(positionAvatar3));
-        imgAvatar4.setOnClickListener(v -> changeAvatar(positionAvatar4));
-        imgAvatar5.setOnClickListener(v -> changeAvatar(positionAvatar5));
-        imgAvatar6.setOnClickListener(v -> changeAvatar(positionAvatar6));
-        lblAvatar1.setOnClickListener(v -> changeAvatar(positionAvatar1));
-        lblAvatar2.setOnClickListener(v -> changeAvatar(positionAvatar2));
-        lblAvatar3.setOnClickListener(v -> changeAvatar(positionAvatar3));
-        lblAvatar4.setOnClickListener(v -> changeAvatar(positionAvatar4));
-        lblAvatar5.setOnClickListener(v -> changeAvatar(positionAvatar5));
-        lblAvatar6.setOnClickListener(v -> changeAvatar(positionAvatar6));
+        imgAvatar1.setOnClickListener(v -> changeSelectedAvatar(positionAvatar1));
+        imgAvatar2.setOnClickListener(v -> changeSelectedAvatar(positionAvatar2));
+        imgAvatar3.setOnClickListener(v -> changeSelectedAvatar(positionAvatar3));
+        imgAvatar4.setOnClickListener(v -> changeSelectedAvatar(positionAvatar4));
+        imgAvatar5.setOnClickListener(v -> changeSelectedAvatar(positionAvatar5));
+        imgAvatar6.setOnClickListener(v -> changeSelectedAvatar(positionAvatar6));
+        lblAvatar1.setOnClickListener(v -> changeSelectedAvatar(positionAvatar1));
+        lblAvatar2.setOnClickListener(v -> changeSelectedAvatar(positionAvatar2));
+        lblAvatar3.setOnClickListener(v -> changeSelectedAvatar(positionAvatar3));
+        lblAvatar4.setOnClickListener(v -> changeSelectedAvatar(positionAvatar4));
+        lblAvatar5.setOnClickListener(v -> changeSelectedAvatar(positionAvatar5));
+        lblAvatar6.setOnClickListener(v -> changeSelectedAvatar(positionAvatar6));
     }
 
 
     private void startAvatar() {
-        List<Avatar> avatars = database.queryAvatars();
+        List<Avatar> avatars = viewModel.queryAvatars();
 
         imgAvatar1.setImageResource(avatars.get(positionAvatar1).getImageResId());
         imgAvatar1.setTag(avatars.get(positionAvatar1).getImageResId());
@@ -127,8 +122,8 @@ public class AvatarActivity extends AppCompatActivity {
     }
 
     private void selectedImage() {
-        List<Avatar> avatarToSelect = database.queryAvatars();
-        Long avatarId = avatar.getId();
+        List<Avatar> avatarToSelect = viewModel.queryAvatars();
+        Long avatarId = viewModel.getAvatar().getId();
 
         if (avatarId == avatarToSelect.get(positionAvatar1).getId()) {
             selectAvatar(imgAvatar1, lblAvatar1);
@@ -145,18 +140,49 @@ public class AvatarActivity extends AppCompatActivity {
         }
     }
 
+    private void deselectedImage() {
+        List<Avatar> avatarToSelect = viewModel.queryAvatars();
+        Long avatarId = viewModel.getAvatar().getId();
+
+        if (avatarId == avatarToSelect.get(positionAvatar1).getId()) {
+            deselectAvatar(imgAvatar1, lblAvatar1);
+        } else if (avatarId == avatarToSelect.get(positionAvatar2).getId()) {
+            deselectAvatar(imgAvatar2, lblAvatar2);
+        } else if (avatarId == avatarToSelect.get(positionAvatar3).getId()) {
+            deselectAvatar(imgAvatar3, lblAvatar3);
+        } else if (avatarId == avatarToSelect.get(positionAvatar4).getId()) {
+            deselectAvatar(imgAvatar4, lblAvatar4);
+        } else if (avatarId == avatarToSelect.get(positionAvatar5).getId()) {
+            deselectAvatar(imgAvatar5, lblAvatar5);
+        } else if (avatarId == avatarToSelect.get(positionAvatar6).getId()) {
+            deselectAvatar(imgAvatar6, lblAvatar6);
+        }
+    }
+
+    private void changeSelectedAvatar(int position) {
+        deselectedImage();
+        viewModel.changeAvatar(position);
+        selectedImage();
+    }
+
     private void selectAvatar(ImageView imgAvatar, TextView lblAvatar) {
-        selectAvatar(imgAvatar);
+        selectImage(imgAvatar);
         imgAvatar.setEnabled(false);
         lblAvatar.setEnabled(false);
     }
 
-    private void selectAvatar(ImageView imageView) {
+    private void deselectAvatar(ImageView imgAvatar, TextView lblAvatar) {
+        deselectImage(imgAvatar);
+        imgAvatar.setEnabled(true);
+        lblAvatar.setEnabled(true);
+    }
+
+    private void selectImage(ImageView imageView) {
         imageView.setAlpha(ResourcesUtils.getFloat(this, R.dimen.avatar_selected_image_alpha));
     }
 
-    private void deselectAvatar(ImageView imageView) {
-
+    private void deselectImage(ImageView imageView) {
+        imageView.setAlpha(ResourcesUtils.getFloat(this, R.dimen.avatar_not_selected_image_alpha));
     }
 
     @Override
@@ -168,7 +194,7 @@ public class AvatarActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.mnuSelect) {
-            // TODO
+            submitAvatar();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -186,9 +212,9 @@ public class AvatarActivity extends AppCompatActivity {
         activity.startActivityForResult(intent, requestCode);
     }
 
-    private void changeAvatar(int positionAvatar) {
+    private void submitAvatar() {
         Intent result = new Intent();
-        Avatar avatar = database.queryAvatar(database.queryAvatars().get(positionAvatar).getId());
+        Avatar avatar = viewModel.getAvatar();
 
         result.putExtra(EXTRA_AVATAR, avatar);
         setResult(RESULT_OK, result);

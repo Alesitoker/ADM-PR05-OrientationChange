@@ -4,13 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import es.iessaladillo.pedrojoya.pr05.R;
@@ -23,7 +22,6 @@ import es.iessaladillo.pedrojoya.pr05.utils.SnackbarUtils;
 import es.iessaladillo.pedrojoya.pr05.utils.TextViewUtils;
 import es.iessaladillo.pedrojoya.pr05.utils.ValidationUtils;
 
-@SuppressWarnings("WeakerAccess")
 public class MainActivity extends AppCompatActivity {
 
     private TextView lblAvatar;
@@ -158,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @NonNull Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (resultCode == RESULT_OK && requestCode == RC_AVATAR) {
             if (data != null && data.hasExtra(AvatarActivity.EXTRA_AVATAR)) {
                 avatar = data.getParcelableExtra(AvatarActivity.EXTRA_AVATAR);

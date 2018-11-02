@@ -25,9 +25,9 @@ public class TextViewUtils {
             public void afterTextChanged(Editable s) {
                 if (text.getText().toString().isEmpty()) {
                     text.setError(context.getString(R.string.main_invalid_data));
-                    view.setTextColor(context.getResources().getColor(R.color.colorError));
+                    view.setEnabled(false);
                 } else {
-                    view.setTextColor(context.getResources().getColor(R.color.colorBlack));
+                    view.setEnabled(true);
                 }
             }
         });

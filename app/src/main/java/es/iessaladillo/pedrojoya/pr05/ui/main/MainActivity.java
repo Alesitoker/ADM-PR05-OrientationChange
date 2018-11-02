@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgPhonenumber;
     private ImageView imgAddress;
     private ImageView imgWeb;
+    private final String VALID_NAME = "VALID_NAME";
+    private final String VALID_EMAIL = "VALID_EMAIL";
+    private final String VALID_PHONENUMBER = "VALID_PHONENUMBER";
+    private final String VALID_ADDRESS = "VALID_ADDRESS";
+    private final String VALID_WEB = "VALID_WEB";
     private final int RC_AVATAR = 12;
     private MainActivityViewModel viewModel;
 
@@ -52,6 +57,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
         initViews();
+        if (savedInstanceState != null) {
+            setupSaveData(savedInstanceState);
+        }
+    }
+
+    private void setupSaveData(Bundle savedInstanceState) {
+        lblName.setTextColor(savedInstanceState.getInt(VALID_NAME));
+        if (savedInstanceState.getCharSequence(VALID_EMAIL) == getString(R.string.main_invalid_data)) {
+            validateEmail();
+        }
+        if (savedInstanceState.getCharSequence(VALID_PHONENUMBER) == getString(R.string.main_invalid_data)) {
+            validatePhonenumber();
+        }
+        if (savedInstanceState.getCharSequence(VALID_ADDRESS) == getString(R.string.main_invalid_data)) {
+            validateAddress();
+        }
+        if (savedInstanceState.getCharSequence(VALID_WEB) == getString(R.string.main_invalid_data)) {
+            validateWeb();
+        }
     }
 
     @Override
@@ -72,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         TextViewUtils.onTextChanged(txtPhonenumber, lblPhonenumber, imgPhonenumber, this);
         TextViewUtils.afterTextChanged(txtAddress, lblAddress, imgAddress, this);
         TextViewUtils.onTextChanged(txtWeb, lblWeb, imgWeb, this);
+
+
     }
 
     private void finishOnChange() {
@@ -214,8 +240,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validateName() {
         if (txtName.getText().toString().isEmpty()) {
-            txtName.setError(getString(R.string.main_invalid_data));
-            lblName.setTextColor(getResources().getColor(R.color.colorError));
+            invalidData(txtName, lblName);
             return false;
         }
         return true;
@@ -223,9 +248,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validateEmail() {
         if (!ValidationUtils.isValidEmail(txtEmail.getText().toString())) {
-            txtEmail.setError(getString(R.string.main_invalid_data));
-            lblEmail.setTextColor(getResources().getColor(R.color.colorError));
-            imgEmail.setEnabled(false);
+            invalidData(txtEmail, lblEmail, imgEmail);
             return false;
         }
         return true;
@@ -233,9 +256,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validatePhonenumber() {
         if (!ValidationUtils.isValidPhone(txtPhonenumber.getText().toString())) {
-            txtPhonenumber.setError(getString(R.string.main_invalid_data));
-            lblPhonenumber.setTextColor(getResources().getColor(R.color.colorError));
-            imgPhonenumber.setEnabled(false);
+            invalidData(txtPhonenumber, lblPhonenumber, imgPhonenumber);
             return false;
         }
         return true;
@@ -243,9 +264,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validateAddress() {
         if (txtAddress.getText().toString().isEmpty()) {
-            txtAddress.setError(getString(R.string.main_invalid_data));
-            lblAddress.setTextColor(getResources().getColor(R.color.colorError));
-            imgAddress.setEnabled(false);
+            invalidData(txtAddress, lblAddress, imgAddress);
             return false;
         }
         return true;
@@ -253,13 +272,23 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validateWeb() {
         if (!ValidationUtils.isValidUrl(txtWeb.getText().toString())) {
-            txtWeb.setError(getString(R.string.main_invalid_data));
-            lblWeb.setTextColor(getResources().getColor(R.color.colorError));
-            imgWeb.setEnabled(false);
+            invalidData(txtWeb, lblWeb, imgWeb);
             return false;
         }
         return true;
     }
+
+    private void invalidData(EditText txt, TextView lbl) {
+        txt.setError(getString(R.string.main_invalid_data));
+        lbl.setEnabled(false);
+    }
+
+    private void invalidData(EditText txt, TextView lbl, ImageView imageView) {
+        txt.setError(getString(R.string.main_invalid_data));
+        lbl.setEnabled(false);
+        imageView.setEnabled(false);
+    }
+
     private boolean validate() {
         boolean validName, validEmail, validPhonenumber, validAddress, validWeb;
         validName = validateName();
@@ -280,4 +309,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(VALID_NAME, lblName.getCurrentTextColor());
+        outState.putCharSequence(VALID_EMAIL, txtEmail.getError());
+        outState.putCharSequence(VALID_PHONENUMBER, txtPhonenumber.getError());
+        outState.putCharSequence(VALID_ADDRESS, txtAddress.getError());
+        outState.putCharSequence(VALID_WEB, txtWeb.getError());
+    }
 }

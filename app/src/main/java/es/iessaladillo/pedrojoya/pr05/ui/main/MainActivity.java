@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.lifecycle.ViewModelProviders;
 import es.iessaladillo.pedrojoya.pr05.R;
 import es.iessaladillo.pedrojoya.pr05.data.local.Database;
 import es.iessaladillo.pedrojoya.pr05.data.local.model.Avatar;
@@ -41,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgAddress;
     private ImageView imgWeb;
     private final int RC_AVATAR = 12;
-    private final Database database = Database.getInstance();
-    private Avatar avatar;
+    private MainActivityViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
         initViews();
     }
 
@@ -69,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
         imgAddress = ActivityCompat.requireViewById(this, R.id.imgAddress);
         imgWeb = ActivityCompat.requireViewById(this, R.id.imgWeb);
 
-        showAvatar(avatar = database.getDefaultAvatar());
+        defaultAvatar();
+        showAvatar();
         changeFocus();
         editorAction();
         TextViewUtils.afterTextChanged(txtName, lblName, this);
@@ -83,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
         imgPhonenumber.setOnClickListener(v -> dialPhoneNumber());
         imgAddress.setOnClickListener(v -> searchInMap());
         imgWeb.setOnClickListener(v -> webSearch());
+    }
+
+    private void defaultAvatar() {
+        if (viewModel.getAvatar() == null) {
+            viewModel.setAvatar(viewModel.getDefaultAvatar());
+        }
     }
 
     private void webSearch() {
@@ -144,23 +152,22 @@ public class MainActivity extends AppCompatActivity {
         TextViewUtils.changeFocus(txtWeb, lblWeb);
     }
 
-    private void showAvatar(Avatar avatar) {
-        this.avatar = avatar;
-        imgAvatar.setImageResource(avatar.getImageResId());
-        imgAvatar.setTag(avatar.getImageResId());
-        lblAvatar.setText(avatar.getName());
+    private void showAvatar() {
+        imgAvatar.setImageResource(viewModel.getAvatar().getImageResId());
+        imgAvatar.setTag(viewModel.getAvatar().getImageResId());
+        lblAvatar.setText(viewModel.getAvatar().getName());
     }
 
     private void changeImg() {
-        AvatarActivity.startForResult(this, RC_AVATAR, avatar);
+        AvatarActivity.startForResult(this, RC_AVATAR, viewModel.getAvatar());
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (resultCode == RESULT_OK && requestCode == RC_AVATAR) {
             if (data != null && data.hasExtra(AvatarActivity.EXTRA_AVATAR)) {
-                avatar = data.getParcelableExtra(AvatarActivity.EXTRA_AVATAR);
-                showAvatar(avatar);
+                viewModel.setAvatar(data.getParcelableExtra(AvatarActivity.EXTRA_AVATAR));
+                showAvatar();
             }
         }
     }

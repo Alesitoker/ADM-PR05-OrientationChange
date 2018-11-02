@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.lifecycle.ViewModelProviders;
 import es.iessaladillo.pedrojoya.pr05.R;
-import es.iessaladillo.pedrojoya.pr05.data.local.Database;
 import es.iessaladillo.pedrojoya.pr05.data.local.model.Avatar;
 import es.iessaladillo.pedrojoya.pr05.utils.ResourcesUtils;
 
@@ -23,18 +22,8 @@ public class AvatarActivity extends AppCompatActivity {
 
     @VisibleForTesting
     public static final String EXTRA_AVATAR = "EXTRA_AVATAR";
-    private ImageView imgAvatar1;
-    private ImageView imgAvatar2;
-    private ImageView imgAvatar3;
-    private ImageView imgAvatar4;
-    private ImageView imgAvatar5;
-    private ImageView imgAvatar6;
-    private TextView lblAvatar1;
-    private TextView lblAvatar2;
-    private TextView lblAvatar3;
-    private TextView lblAvatar4;
-    private TextView lblAvatar5;
-    private TextView lblAvatar6;
+    ImageView imgAvatars[] = new ImageView[6];
+    TextView lblAvatars[] = new TextView[6];
     private final byte positionAvatar1 = 0;
     private final byte positionAvatar2 = 1;
     private final byte positionAvatar3 = 2;
@@ -62,101 +51,84 @@ public class AvatarActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        imgAvatar1 = ActivityCompat.requireViewById(this, R.id.imgAvatar1);
-        imgAvatar2 = ActivityCompat.requireViewById(this, R.id.imgAvatar2);
-        imgAvatar3 = ActivityCompat.requireViewById(this, R.id.imgAvatar3);
-        imgAvatar4 = ActivityCompat.requireViewById(this, R.id.imgAvatar4);
-        imgAvatar5 = ActivityCompat.requireViewById(this, R.id.imgAvatar5);
-        imgAvatar6 = ActivityCompat.requireViewById(this, R.id.imgAvatar6);
-        lblAvatar1 = ActivityCompat.requireViewById(this, R.id.lblAvatar1);
-        lblAvatar2 = ActivityCompat.requireViewById(this, R.id.lblAvatar2);
-        lblAvatar3 = ActivityCompat.requireViewById(this, R.id.lblAvatar3);
-        lblAvatar4 = ActivityCompat.requireViewById(this, R.id.lblAvatar4);
-        lblAvatar5 = ActivityCompat.requireViewById(this, R.id.lblAvatar5);
-        lblAvatar6 = ActivityCompat.requireViewById(this, R.id.lblAvatar6);
-
+        setupAvatar();
         startAvatar();
         selectedImage();
-        imgAvatar1.setOnClickListener(v -> changeSelectedAvatar(positionAvatar1));
-        imgAvatar2.setOnClickListener(v -> changeSelectedAvatar(positionAvatar2));
-        imgAvatar3.setOnClickListener(v -> changeSelectedAvatar(positionAvatar3));
-        imgAvatar4.setOnClickListener(v -> changeSelectedAvatar(positionAvatar4));
-        imgAvatar5.setOnClickListener(v -> changeSelectedAvatar(positionAvatar5));
-        imgAvatar6.setOnClickListener(v -> changeSelectedAvatar(positionAvatar6));
-        lblAvatar1.setOnClickListener(v -> changeSelectedAvatar(positionAvatar1));
-        lblAvatar2.setOnClickListener(v -> changeSelectedAvatar(positionAvatar2));
-        lblAvatar3.setOnClickListener(v -> changeSelectedAvatar(positionAvatar3));
-        lblAvatar4.setOnClickListener(v -> changeSelectedAvatar(positionAvatar4));
-        lblAvatar5.setOnClickListener(v -> changeSelectedAvatar(positionAvatar5));
-        lblAvatar6.setOnClickListener(v -> changeSelectedAvatar(positionAvatar6));
+        imgAvatars[positionAvatar1].setOnClickListener(v -> changeSelectedAvatar(positionAvatar1));
+        imgAvatars[positionAvatar2].setOnClickListener(v -> changeSelectedAvatar(positionAvatar2));
+        imgAvatars[positionAvatar3].setOnClickListener(v -> changeSelectedAvatar(positionAvatar3));
+        imgAvatars[positionAvatar4].setOnClickListener(v -> changeSelectedAvatar(positionAvatar4));
+        imgAvatars[positionAvatar5].setOnClickListener(v -> changeSelectedAvatar(positionAvatar5));
+        imgAvatars[positionAvatar6].setOnClickListener(v -> changeSelectedAvatar(positionAvatar6));
+        lblAvatars[positionAvatar1].setOnClickListener(v -> changeSelectedAvatar(positionAvatar1));
+        lblAvatars[positionAvatar2].setOnClickListener(v -> changeSelectedAvatar(positionAvatar2));
+        lblAvatars[positionAvatar3].setOnClickListener(v -> changeSelectedAvatar(positionAvatar3));
+        lblAvatars[positionAvatar4].setOnClickListener(v -> changeSelectedAvatar(positionAvatar4));
+        lblAvatars[positionAvatar5].setOnClickListener(v -> changeSelectedAvatar(positionAvatar5));
+        lblAvatars[positionAvatar6].setOnClickListener(v -> changeSelectedAvatar(positionAvatar6));
+    }
+
+    private void setupAvatar() {
+        imgAvatars[positionAvatar1] = ActivityCompat.requireViewById(this, R.id.imgAvatar1);
+        imgAvatars[positionAvatar2] = ActivityCompat.requireViewById(this, R.id.imgAvatar2);
+        imgAvatars[positionAvatar3] = ActivityCompat.requireViewById(this, R.id.imgAvatar3);
+        imgAvatars[positionAvatar4] = ActivityCompat.requireViewById(this, R.id.imgAvatar4);
+        imgAvatars[positionAvatar5] = ActivityCompat.requireViewById(this, R.id.imgAvatar5);
+        imgAvatars[positionAvatar6] = ActivityCompat.requireViewById(this, R.id.imgAvatar6);
+
+        lblAvatars[positionAvatar1] = ActivityCompat.requireViewById(this, R.id.lblAvatar1);
+        lblAvatars[positionAvatar2] = ActivityCompat.requireViewById(this, R.id.lblAvatar2);
+        lblAvatars[positionAvatar3] = ActivityCompat.requireViewById(this, R.id.lblAvatar3);
+        lblAvatars[positionAvatar4] = ActivityCompat.requireViewById(this, R.id.lblAvatar4);
+        lblAvatars[positionAvatar5] = ActivityCompat.requireViewById(this, R.id.lblAvatar5);
+        lblAvatars[positionAvatar6] = ActivityCompat.requireViewById(this, R.id.lblAvatar6);
+
     }
 
 
     private void startAvatar() {
         List<Avatar> avatars = viewModel.queryAvatars();
 
-        imgAvatar1.setImageResource(avatars.get(positionAvatar1).getImageResId());
-        imgAvatar1.setTag(avatars.get(positionAvatar1).getImageResId());
-        lblAvatar1.setText(avatars.get(positionAvatar1).getName());
-
-        imgAvatar2.setImageResource(avatars.get(positionAvatar2).getImageResId());
-        imgAvatar2.setTag(avatars.get(positionAvatar2).getImageResId());
-        lblAvatar2.setText(avatars.get(positionAvatar2).getName());
-
-        imgAvatar3.setImageResource(avatars.get(positionAvatar3).getImageResId());
-        imgAvatar3.setTag(avatars.get(positionAvatar3).getImageResId());
-        lblAvatar3.setText(avatars.get(positionAvatar3).getName());
-
-        imgAvatar4.setImageResource(avatars.get(positionAvatar4).getImageResId());
-        imgAvatar4.setTag(avatars.get(positionAvatar4).getImageResId());
-        lblAvatar4.setText(avatars.get(positionAvatar4).getName());
-
-        imgAvatar5.setImageResource(avatars.get(positionAvatar5).getImageResId());
-        imgAvatar5.setTag(avatars.get(positionAvatar5).getImageResId());
-        lblAvatar5.setText(avatars.get(positionAvatar5).getName());
-
-        imgAvatar6.setImageResource(avatars.get(positionAvatar6).getImageResId());
-        imgAvatar6.setTag(avatars.get(positionAvatar6).getImageResId());
-        lblAvatar6.setText(avatars.get(positionAvatar6).getName());
-
+        for (int i = 0; i < imgAvatars.length; i++) {
+            imgAvatars[i].setImageResource(avatars.get(i).getImageResId());
+            imgAvatars[i].setTag(avatars.get(i).getImageResId());
+            lblAvatars[i].setText(avatars.get(i).getName());
+        }
     }
 
     private void selectedImage() {
-        List<Avatar> avatarToSelect = viewModel.queryAvatars();
-        Long avatarId = viewModel.getAvatar().getId();
+        int position;
 
-        if (avatarId == avatarToSelect.get(positionAvatar1).getId()) {
-            selectAvatar(imgAvatar1, lblAvatar1);
-        } else if (avatarId == avatarToSelect.get(positionAvatar2).getId()) {
-            selectAvatar(imgAvatar2, lblAvatar2);
-        } else if (avatarId == avatarToSelect.get(positionAvatar3).getId()) {
-            selectAvatar(imgAvatar3, lblAvatar3);
-        } else if (avatarId == avatarToSelect.get(positionAvatar4).getId()) {
-            selectAvatar(imgAvatar4, lblAvatar4);
-        } else if (avatarId == avatarToSelect.get(positionAvatar5).getId()) {
-            selectAvatar(imgAvatar5, lblAvatar5);
-        } else if (avatarId == avatarToSelect.get(positionAvatar6).getId()) {
-            selectAvatar(imgAvatar6, lblAvatar6);
-        }
+        position = obtainPositionAvatar();
+        selectAvatar(imgAvatars[position], lblAvatars[position]);
     }
 
     private void deselectedImage() {
+        int position;
+
+        position = obtainPositionAvatar();
+        deselectAvatar(imgAvatars[position], lblAvatars[position]);
+    }
+
+    private int obtainPositionAvatar() {
         List<Avatar> avatarToSelect = viewModel.queryAvatars();
         Long avatarId = viewModel.getAvatar().getId();
+        int position = 0;
 
         if (avatarId == avatarToSelect.get(positionAvatar1).getId()) {
-            deselectAvatar(imgAvatar1, lblAvatar1);
+            position = positionAvatar1;
         } else if (avatarId == avatarToSelect.get(positionAvatar2).getId()) {
-            deselectAvatar(imgAvatar2, lblAvatar2);
+            position = positionAvatar2;
         } else if (avatarId == avatarToSelect.get(positionAvatar3).getId()) {
-            deselectAvatar(imgAvatar3, lblAvatar3);
+            position = positionAvatar3;
         } else if (avatarId == avatarToSelect.get(positionAvatar4).getId()) {
-            deselectAvatar(imgAvatar4, lblAvatar4);
+            position = positionAvatar4;
         } else if (avatarId == avatarToSelect.get(positionAvatar5).getId()) {
-            deselectAvatar(imgAvatar5, lblAvatar5);
+            position = positionAvatar5;
         } else if (avatarId == avatarToSelect.get(positionAvatar6).getId()) {
-            deselectAvatar(imgAvatar6, lblAvatar6);
+            position = positionAvatar6;
         }
+        return position;
     }
 
     private void changeSelectedAvatar(int position) {

@@ -2,6 +2,8 @@ package es.iessaladillo.pedrojoya.pr05.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
@@ -52,6 +54,34 @@ public class MainActivity extends AppCompatActivity {
         initViews();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        startOnchange();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finishOnChange();
+    }
+
+    private void startOnchange() {
+        TextViewUtils.afterTextChanged(txtName, lblName, this);
+        TextViewUtils.onTextChanged(txtEmail, lblEmail, imgEmail, this);
+        TextViewUtils.onTextChanged(txtPhonenumber, lblPhonenumber, imgPhonenumber, this);
+        TextViewUtils.afterTextChanged(txtAddress, lblAddress, imgAddress, this);
+        TextViewUtils.onTextChanged(txtWeb, lblWeb, imgWeb, this);
+    }
+
+    private void finishOnChange() {
+        TextViewUtils.removeOnTextChanged(txtName);
+        TextViewUtils.removeOnTextChanged(txtEmail);
+        TextViewUtils.removeOnTextChanged(txtPhonenumber);
+        TextViewUtils.removeOnTextChanged(txtAddress);
+        TextViewUtils.removeOnTextChanged(txtWeb);
+    }
+
     private void initViews() {
         lblAvatar = ActivityCompat.requireViewById(this, R.id.lblAvatar);
         imgAvatar = ActivityCompat.requireViewById(this, R.id.imgAvatar);
@@ -74,11 +104,6 @@ public class MainActivity extends AppCompatActivity {
         showAvatar();
         changeFocus();
         editorAction();
-        TextViewUtils.afterTextChanged(txtName, lblName, this);
-        TextViewUtils.onTextChanged(txtEmail, lblEmail, imgEmail, this);
-        TextViewUtils.onTextChanged(txtPhonenumber, lblPhonenumber, imgPhonenumber, this);
-        TextViewUtils.afterTextChanged(txtAddress, lblAddress, imgAddress, this);
-        TextViewUtils.onTextChanged(txtWeb, lblWeb, imgWeb, this);
         imgAvatar.setOnClickListener(v -> changeImg());
         lblAvatar.setOnClickListener(v -> changeImg());
         imgEmail.setOnClickListener(v -> sendEmail());

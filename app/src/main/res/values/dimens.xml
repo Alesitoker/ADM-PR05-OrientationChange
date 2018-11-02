@@ -8,6 +8,6 @@
     <dimen name="ic_marginEnd">12dp</dimen>
     <dimen name="lbl_imgAvatar_margin">16dp</dimen>
     <dimen name="lbl_imgAvatarProfile_padding">8dp</dimen>
-    <dimen name="profile_marginTop">8dp</dimen>
+    <dimen name="profile_margin">8dp</dimen>
     <dimen name="lbl_imgAvatar_padding">4dp</dimen>
 </resources>

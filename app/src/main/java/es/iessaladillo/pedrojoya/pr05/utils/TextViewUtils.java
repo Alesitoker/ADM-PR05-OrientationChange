@@ -82,6 +82,25 @@ public class TextViewUtils {
         });
     }
 
+    public static void removeOnTextChanged(EditText txt) {
+        txt.removeTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+    }
+
     public static void changeFocus(EditText txt, TextView lbl) {
         txt.setOnFocusChangeListener((v, hasFocus) -> {
             if (hasFocus) {
